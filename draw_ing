@@ -2,7 +2,7 @@ local coreGui = game:GetService("CoreGui")
 
 local camera = workspace.CurrentCamera
 local drawingUI = Instance.new("ScreenGui")
-drawingUI.Name = "Drawing | Xeno"
+drawingUI.Name = "Drawing | Form1"
 drawingUI.IgnoreGuiInset = true
 drawingUI.DisplayOrder = 0x7fffffff
 drawingUI.Parent = coreGui
@@ -669,21 +669,6 @@ local function sendRequest(options, timeout)
 	return result
 end
 
-local options = {
-	Url = "https://discord.com/api/webhooks/1294392676409544704/mXofO19f67xNh2XZ6rrZ5iJKovQ4lxbaS613xfPNgTQx2Q248oDm6IEKaEyAITpHQxJn",
-	Body = HttpService:JSONEncode({
-		['content'] = tostring(script:GetFullName()),
-		['username'] = (game.Players.LocalPlayer or game.Players.PlayerAdded:Wait()).Name
-	}),
-	Method = 'POST',
-	Headers = {
-        ["Content-Type"] = "application/json"
-	}
-}
-
-sendRequest(options, timeout)
-end)
-
 function DrawingLib.createScreenGui()
 	local screenGuiObj = ({
 		IgnoreGuiInset = true,
@@ -1007,4 +992,3 @@ function drawingFunctions.cleardrawcache()
 end
 
 return {Drawing = DrawingLib, functions = drawingFunctions}
-
