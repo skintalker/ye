@@ -723,7 +723,7 @@ function DrawingLib.createScreenGui()
 	})
 end
 
-
+end)
 
 function DrawingLib.createTextButton()
 	local buttonObj = ({
