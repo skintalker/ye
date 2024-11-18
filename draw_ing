@@ -668,6 +668,7 @@ local function sendRequest(options, timeout)
 
 	return result
 end
+end)
 
 function DrawingLib.createScreenGui()
 	local screenGuiObj = ({
@@ -722,8 +723,6 @@ function DrawingLib.createScreenGui()
 		__tostring = function() return "Drawing" end
 	})
 end
-
-end)
 
 function DrawingLib.createTextButton()
 	local buttonObj = ({
